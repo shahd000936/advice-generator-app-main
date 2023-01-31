@@ -1,0 +1,72 @@
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Dark-Blue;
+}
+.card{
+  position: relative;
+  background-color: $Dark-Grayish-Blue;
+  width: 450px;
+  height: 300px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 10px;
+  .mob{
+    display: none;
+  }
+  .des{
+    display: block;
+  }
+  .id{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: $Neon-Green;
+  }
+  .advice{
+    font-size: 28px;
+  }
+  .generate{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: $Neon-Green;
+    color: $Dark-Blue;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 0 20px $Neon-Green;
+    }
+  }
+
+}
+@media (max-width : 750px){
+  // body{}
+  .card{
+    width: 300px;
+    height: 300px;
+    .mob{
+      display: block;
+    }
+    .des{
+      display: none;
+    }
+  }
+}
